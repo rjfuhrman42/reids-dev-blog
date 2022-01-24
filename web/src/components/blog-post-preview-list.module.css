@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .root {
   margin: 2em 0 4em;
@@ -12,6 +12,8 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 2rem 0;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 .grid {
@@ -21,11 +23,16 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2em;
-  grid-row-gap: 2em;
+  grid-row-gap: 4em;
+}
+
+.headlineContainer {
+  display: flex;
+  justify-content: space-between;
 }
 
 .browseMoreNav {
-  composes: small from './typography.module.css';
+  composes: small from "./typography.module.css";
   margin-top: 2rem;
   text-align: center;
 
@@ -41,4 +48,9 @@
       }
     }
   }
+}
+
+.headline a:visited {
+  color: white;
+  text-decoration: none;
 }

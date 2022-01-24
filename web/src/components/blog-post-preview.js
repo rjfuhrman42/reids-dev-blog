@@ -14,7 +14,13 @@ function BlogPostPreview(props) {
       className={props.isInList ? styles.inList : styles.inGrid}
       to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
-      <div className={styles.leadMediaThumb}>
+      {/* 
+          Below is commented out for the time being, 
+          as I prefer the minimal look of no preview image.
+          Once inside the blog post, images may be seen.
+      */}
+
+      {/* <div className={styles.leadMediaThumb}>
         {props.mainImage && props.mainImage.asset && (
           <img
             src={imageUrlFor(buildImageObj(props.mainImage))
@@ -25,7 +31,7 @@ function BlogPostPreview(props) {
             alt={props.mainImage.alt}
           />
         )}
-      </div>
+      </div> */}
       <div className={styles.text}>
         <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
         {props._rawExcerpt && (

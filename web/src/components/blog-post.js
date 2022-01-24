@@ -4,33 +4,26 @@ import AuthorList from "./author-list";
 import Container from "./container";
 import PortableText from "./portableText";
 import React from "react";
-import { buildImageObj } from "../lib/helpers";
-import { imageUrlFor } from "../lib/image-url";
+// import { buildImageObj } from "../lib/helpers";
+// import { imageUrlFor } from "../lib/image-url";
 
 function BlogPost(props) {
-  const {
-    _rawBody,
-    authors,
-    categories,
-    title,
-    mainImage,
-    publishedAt,
-  } = props;
+  const { _rawBody, authors, categories, title, publishedAt } = props;
   return (
     <article className={styles.root}>
-      {mainImage && mainImage.asset && (
+      {/* {mainImage && mainImage.asset && (
         <div className={styles.mainImage}>
           <img
             src={imageUrlFor(buildImageObj(mainImage))
-              .width(1200)
-              .height(Math.floor((9 / 16) * 1200))
+              .width(960)
+              .height(Math.floor((9 / 16) * 960))
               .fit("crop")
               .auto("format")
               .url()}
             alt={mainImage.alt}
           />
         </div>
-      )}
+      )} */}
       <Container>
         <div className={styles.grid}>
           <div className={styles.mainContent}>

@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 :root {
   --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-lato: "Lato", sans-serif;
 
   --color-black: #202123;
   --color-dark-gray: #32373e;
@@ -9,13 +12,20 @@
   --color-white: #fff;
   --color-accent: #156dff;
 
+  /* portfolio color palette */
+  --darkest-purple-color: #1b002a;
+  --darkest-purple-translucent: #1b002ad8;
+  --dark-purple-color: #52057b;
+  --medium-purple-color: #892cdc;
+  --light-purple-color: #bc6ff1;
+
   /* Typography */
   --unit: 16;
   --font-micro-size: calc(10 / var(--unit) * 1rem); /* 10px */
   --font-micro-line-height: calc(12 / 10); /* 12px */
   --font-small-size: calc(14 / var(--unit) * 1rem); /* 14px */
   --font-small-line-height: calc(21 / 14); /* 21px */
-  --font-base-size: 1em; /* 16px */
+  --font-base-size: 1.25em; /* 16px */
   --font-base-line-height: calc(24 / var(--unit)); /* 24px */
   --font-large-size: calc(18 / var(--unit) * 1rem); /* 18px */
   --font-large-line-height: calc(27 / 18); /* 27px */

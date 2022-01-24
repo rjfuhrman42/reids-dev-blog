@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .root {
   position: relative;
@@ -20,17 +20,27 @@
 
 .branding {
   font-weight: 600;
+  font-size: 1.5rem;
   flex: 1;
+
+  display: flex;
+  justify-content: center;
 
   @nest & a {
     display: inline-block;
-    padding: 0.5em;
+    padding: 0.25em 1em;
     color: inherit;
     text-decoration: none;
+    background: var(--dark-purple-color);
+
+    border-right: 8px solid var(--light-purple-color);
+    border-left: 8px solid var(--light-purple-color);
+    border-bottom: 8px solid var(--medium-purple-color);
+    border-top: 1px solid var(--light-purple-color);
 
     @media (hover: hover) {
       @nest &:hover {
-        color: var(--color-accent);
+        color: var(--color-light-gray);
       }
     }
   }
