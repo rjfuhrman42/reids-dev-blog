@@ -89,7 +89,7 @@ const IndexPage = (props) => {
   }
 
   return (
-    <Layout>
+    <Layout location={props.location}>
       <SEO
         title={site.title}
         description={site.description}

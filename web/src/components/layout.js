@@ -1,17 +1,32 @@
 import React from "react";
 import Header from "./header";
+import { Link } from "gatsby";
 
 import "../styles/layout.css";
 import * as styles from "./layout.module.css";
 
-const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle }) => (
+const Layout = ({
+  children,
+  onHideNav,
+  onShowNav,
+  showNav,
+  siteTitle,
+  location,
+}) => (
   <>
-    <Header
-      siteTitle={siteTitle}
-      onHideNav={onHideNav}
-      onShowNav={onShowNav}
-      showNav={showNav}
-    />
+    {location ? ( // if the location is undefined or falsy, disable the header. This only occurs when not on the main page "/" (?)
+      <Header
+        siteTitle={siteTitle}
+        onHideNav={onHideNav}
+        onShowNav={onShowNav}
+        showNav={showNav}
+      />
+    ) : (
+      <h2 className={styles.headline}>
+        <Link to="/">← Back to all posts</Link>
+      </h2>
+    )}
+
     <div className={styles.content}>{children}</div>
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>

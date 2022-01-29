@@ -27,7 +27,7 @@
   font-weight: 400;
   font-size: 2rem;
   text-transform: uppercase;
-  font-family: Roboto Mono, monospace;
+  font-family: var(--font-family-IBM-plex);
 
   @nest & a {
     display: inline-block;
