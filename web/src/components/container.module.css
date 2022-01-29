@@ -2,8 +2,9 @@
 
 .root {
   box-sizing: border-box;
+  width: 70ch;
   max-width: 960px;
-  padding: 0.5em;
+  padding: 1.5em;
   margin: 0 auto;
 
   @media (--media-min-small) {

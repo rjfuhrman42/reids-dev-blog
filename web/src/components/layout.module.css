@@ -2,12 +2,17 @@
 @import "../styles/custom-properties.css";
 
 .content {
-  background: var(--darkest-purple-color);
   min-height: calc(100% - 73px - 120px);
 
   @media (--media-min-small) {
     min-height: calc(100% - 91px - 155px);
   }
+}
+
+.placeholder {
+  height: 100vh;
+
+  width: 35vw;
 }
 
 .footer {

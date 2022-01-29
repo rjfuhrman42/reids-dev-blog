@@ -6,7 +6,7 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: var(--darkest-purple-color);
+  background: #1b1b1b;
   color: var(--color-white);
   margin: 0;
 }

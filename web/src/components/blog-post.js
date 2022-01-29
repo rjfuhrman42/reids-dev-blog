@@ -28,9 +28,6 @@ function BlogPost(props) {
         <div className={styles.grid}>
           <div className={styles.mainContent}>
             <h1 className={styles.title}>{title}</h1>
-            {_rawBody && <PortableText blocks={_rawBody} />}
-          </div>
-          <aside className={styles.metaContent}>
             {publishedAt && (
               <div className={styles.publishedAt}>
                 {differenceInDays(new Date(publishedAt), new Date()) > 3
@@ -38,6 +35,9 @@ function BlogPost(props) {
                   : format(new Date(publishedAt), "MMMM Mo, yyyy")}
               </div>
             )}
+            {_rawBody && <PortableText blocks={_rawBody} />}
+          </div>
+          <aside className={styles.metaContent}>
             {authors && <AuthorList items={authors} title="Authors" />}
             {categories && (
               <div className={styles.categories}>

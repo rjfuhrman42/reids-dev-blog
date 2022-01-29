@@ -5,27 +5,29 @@ import React from "react";
 
 function BlogPostPreviewGrid(props) {
   return (
-    <div className={styles.root}>
-      <div className={styles.headlineContainer}>
-        {props.title && <h2 className={styles.headline}>{props.title}</h2>}
-        <h2 className={styles.headline}>
-          <Link to="/archive/">Archive</Link>
-        </h2>
-      </div>
-      <ul className={styles.grid}>
-        {props.nodes &&
-          props.nodes.map((node) => (
-            <li key={node.id}>
-              <BlogPostPreview {...node} isInList />
-            </li>
-          ))}
-      </ul>
-      {props.browseMoreHref && (
-        <div className={styles.browseMoreNav}>
-          <Link to={props.browseMoreHref}>Browse more</Link>
+    <>
+      <div className={styles.root}>
+        <div className={styles.headlineContainer}>
+          {props.title && <h2 className={styles.headline}>{props.title}</h2>}
+          <h2 className={styles.headline}>
+            <Link to="/archive/">Archive</Link>
+          </h2>
         </div>
-      )}
-    </div>
+        <ul className={styles.grid}>
+          {props.nodes &&
+            props.nodes.map((node) => (
+              <li key={node.id}>
+                <BlogPostPreview {...node} isInList />
+              </li>
+            ))}
+        </ul>
+        {props.browseMoreHref && (
+          <div className={styles.browseMoreNav}>
+            <Link to={props.browseMoreHref}>Browse more</Link>
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 
