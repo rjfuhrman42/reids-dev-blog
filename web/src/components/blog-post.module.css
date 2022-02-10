@@ -3,15 +3,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Murecho:wght@300;400&display=swap");
 
 .root {
-  color: var(--color-very-light-gray);
-  padding-top: 1em;
+  color: var(--color-black);
 }
 
 .title {
   /* composes: responsiveTitle1 from "./typography.module.css"; */
+
   font-family: var(--font-family-IBM-plex);
   font-size: 3em;
-  margin: 0;
+
+  padding: 1em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titleContainer {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background: white;
 }
 
 .mainImage {
@@ -76,7 +85,6 @@
   padding: 1.5rem 0rem;
   margin-bottom: 1.5rem;
   color: var(--color-gray);
-  border-bottom: 2px solid var(--medium-purple-color);
 }
 
 .categories {

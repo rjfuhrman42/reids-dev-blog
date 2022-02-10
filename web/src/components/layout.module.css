@@ -27,13 +27,38 @@
 
   @nest & a {
     text-decoration: none;
-    color: white;
+
     @media (hover: hover) {
       @nest &:hover {
         color: var(--light-purple-color);
       }
     }
   }
+}
+
+.paletteContainer {
+  display: flex;
+
+  height: 10px;
+  flex-grow: 1;
+}
+
+.paletteColor__light,
+.paletteColor__medium,
+.paletteColor__dark {
+  flex: 1;
+}
+
+.paletteColor__dark {
+  background-color: var(--dark-purple-color);
+}
+
+.paletteColor__medium {
+  background-color: var(--medium-purple-color);
+}
+
+.paletteColor__light {
+  background-color: var(--light-purple-color);
 }
 
 .footer {

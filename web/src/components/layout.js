@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./header";
 import { Link } from "gatsby";
+import PaletteBorder from "./PaletteBorder";
 
 import "../styles/layout.css";
 import * as styles from "./layout.module.css";
@@ -15,12 +16,16 @@ const Layout = ({
 }) => (
   <>
     {location ? ( // if the location is undefined or falsy, disable the header. This only occurs when not on the main page "/" (?)
-      <Header
-        siteTitle={siteTitle}
-        onHideNav={onHideNav}
-        onShowNav={onShowNav}
-        showNav={showNav}
-      />
+      <>
+        <PaletteBorder>
+          <Header
+            siteTitle={siteTitle}
+            onHideNav={onHideNav}
+            onShowNav={onShowNav}
+            showNav={showNav}
+          />
+        </PaletteBorder>
+      </>
     ) : (
       <h2 className={styles.headline}>
         <Link to="/">← Back to all posts</Link>

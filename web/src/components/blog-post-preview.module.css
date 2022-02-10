@@ -5,17 +5,24 @@
   display: block;
   color: inherit;
   text-decoration: none;
-  background-color: black;
-  border-right: 0.75em solid var(--medium-purple-color);
-  box-shadow: 0em 0.75em 0em 0em var(--dark-purple-color);
+  background-color: white;
+  border-top: 2px solid var(--color-black);
+  border-right: 2px solid var(--color-black);
+  border-left: 0.75em solid var(--medium-purple-color);
+  border-bottom: 0.75em solid var(--dark-purple-color);
+  transition: border 0.1s ease;
+
+  /* box-shadow: 0em 0.75em 0em 0em var(--dark-purple-color); */
 
   padding: 1em;
 }
 
 .root:hover {
-  border-right: 0.75em solid var(--light-purple-color);
-  box-shadow: 0em 0.75em 0em 0em var(--medium-purple-color);
-  transition: border 0.2s ease, box-shadow 0.2s;
+  border-top: 2px solid var(--color-black);
+  border-right: 2px solid var(--color-black);
+  border-left: 1em solid var(--light-purple-color);
+  border-bottom: 1em solid var(--medium-purple-color);
+  transition: border 0.1s ease;
 }
 
 .inList {

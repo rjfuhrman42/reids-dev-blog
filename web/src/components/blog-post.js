@@ -6,6 +6,7 @@ import PortableText from "./portableText";
 import React from "react";
 // import { buildImageObj } from "../lib/helpers";
 // import { imageUrlFor } from "../lib/image-url";
+import PaletteBorder from "./PaletteBorder";
 
 function BlogPost(props) {
   const { _rawBody, authors, categories, title, publishedAt } = props;
@@ -24,10 +25,14 @@ function BlogPost(props) {
           />
         </div>
       )} */}
+      <PaletteBorder>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.title}>{title}</h1>
+        </div>
+      </PaletteBorder>
       <Container>
         <div className={styles.grid}>
           <div className={styles.mainContent}>
-            <h1 className={styles.title}>{title}</h1>
             {publishedAt && (
               <div className={styles.publishedAt}>
                 {differenceInDays(new Date(publishedAt), new Date()) > 3
@@ -37,6 +42,7 @@ function BlogPost(props) {
             )}
             {_rawBody && <PortableText blocks={_rawBody} />}
           </div>
+
           <aside className={styles.metaContent}>
             {authors && <AuthorList items={authors} title="Authors" />}
             {categories && (
